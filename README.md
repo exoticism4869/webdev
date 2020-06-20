@@ -1,0 +1,2 @@
+Fibonacci类中有of静态方法，输入参数为int，代表fibonacci数列中的第几个数，返回一个int值，代表输入的数所对应的fibonacci数
+有一个main方法输出1~200fibonacci数列
