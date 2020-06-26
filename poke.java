@@ -168,9 +168,9 @@ public class poke {
                 j ++;
             }
         }
-        if(copy == 2)return 4;
-        if(copy == 1)return 5;
-        if(copy == 0)return 6;
+        if(copy == 2)return 5;
+        if(copy == 1)return 6;
+        if(copy == 0)return 7;
         return 0;
     }
 }
