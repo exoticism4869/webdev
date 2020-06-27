@@ -1,21 +1,22 @@
-package webdev;
-
 public class poke {
     public int[] pokeInit(char[] type){
-        for(int i = 0; i < 10; i = i + 2){
-            if(type[i] == 'T')type[i] = 10;
-            if(type[i] == 'J')type[i] = 11;
-            if(type[i] == 'Q')type[i] = 12;
-            if(type[i] == 'K')type[i] = 13;
-            if(type[i] == 'A')type[i] = 14;
-        }
-
         int[] typeInt = new int[5];
         for(int i = 0; i < 10; i = i + 2){
-            typeInt[i] = Integer.parseInt(String.valueOf(type[i]));
+            if(type[i] == 'T')typeInt[i/2] = 10;
+            if(type[i] == 'J')typeInt[i/2] = 11;
+            if(type[i] == 'Q')typeInt[i/2] = 12;
+            if(type[i] == 'K')typeInt[i/2] = 13;
+            if(type[i] == 'A')typeInt[i/2] = 14;
         }
 
-        for(int i = 0; i < 4; i = i ++){
+        for(int i = 0; i < 10; i = i + 2){
+            if(type[i] == 'T' || type[i] == 'J' || type[i] == 'Q' || type[i] == 'K' || type[i] == 'A'){
+                continue;
+            }
+            typeInt[i / 2] = Integer.parseInt(String.valueOf(type[i]));
+        }
+
+        for(int i = 0; i < 4; i ++){
             for(int j = 0; j < 4 - i; j ++){
                 if(typeInt[j] > typeInt[j + 1]){
                     int p = typeInt[j];
